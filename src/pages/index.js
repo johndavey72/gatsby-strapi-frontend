@@ -14,6 +14,10 @@ export default function Home() {
       <Header headerText="Hello Gatsby!" />
       <p>What a world.</p>
       <img src="https://source.unsplash.com/random/400x200" alt="" />
+      <p>
+        What do I like to do? Lots of course but definitely enjoy building
+        websites.
+      </p>
     </div>
     </Layout>
   )
