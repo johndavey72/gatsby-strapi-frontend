@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import ListLink from "./listLink"
+import Footer from "./footer";
 // const ListLink = props => (
 //   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
 //     <Link to={props.to}>{props.children}</Link>
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
         </ul>
       </header>
       {children}
+      <Footer />
     </div>
   )
 }
