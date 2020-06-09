@@ -46,11 +46,9 @@ export default function Layout({ children }) {
 
       <ul>
         {data.allStrapiCategory.edges.map(({ node }, index) => (
-          <tr key={index}>
             <li key={node.strapiId}>
               <Link to={`/category/${node.strapiId}`}>{node.name}</Link>
             </li>
-          </tr>
         ))}
       </ul>
 
