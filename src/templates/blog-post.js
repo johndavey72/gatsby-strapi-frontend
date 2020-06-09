@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
+  console.log("---> ", post)
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />

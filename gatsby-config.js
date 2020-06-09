@@ -23,8 +23,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`,
-    description: `A simple description about pandas eating lots...`,
+    title: `The Benefits Directory`,
+    description: `A simple description...`,
     author: `gatsbyjs`,
   },
   plugins: [

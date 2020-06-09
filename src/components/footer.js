@@ -1,11 +1,11 @@
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import ListLink from "./listLink"
 
-const footer = props => {
+const Footer = props => {
   return (
     <div>
-      <h1 style={{ display: `inline` }}>Footer branding</h1>
+      <h1 style={{ display: `inline` }}>The Benefits Directory</h1>
       <ul style={{ listStyle: `none`, float: `right` }}>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
@@ -15,6 +15,6 @@ const footer = props => {
   )
 }
 
-footer.propTypes = {}
+// Footer.propTypes = {}
 
-export default footer
+export default Footer

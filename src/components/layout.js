@@ -1,7 +1,9 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { useStaticQuery, Link, graphql } from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby"
+import Seo from "./seo"
+import Nav from "./nav"
+import Footer from "./footer"
 import { rhythm } from "../utils/typography"
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -12,55 +14,25 @@ export default function Layout({ children }) {
             title
           }
         }
-        allStrapiCategory {
-          edges {
-            node {
-              strapiId
-              name
-            }
-          }
-        }
       }
     `
   )
+
+  console.log(data)
+
   return (
     <div
       css={css`
         margin: 0 auto;
-        max-width: 700px;
+        max-width: 1024px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
       `}
     >
-      <Link to={`/`}>
-        <h3
-          css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          {data.site.siteMetadata.title}
-        </h3>
-      </Link>
-
-      <ul>
-        {data.allStrapiCategory.edges.map(({ node }, index) => (
-            <li key={node.strapiId}>
-              <Link to={`/category/${node.strapiId}`}>{node.name}</Link>
-            </li>
-        ))}
-      </ul>
-
-      <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
-        About
-      </Link>
+      <Seo />
+      <Nav />
       {children}
+      <Footer />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 
 import Layout from "../components/layout"
+// import SEO from "../components/seo"
 
 export const query = graphql`
   query ArticleQuery($id: Int!) {
@@ -22,8 +23,10 @@ export const query = graphql`
 
 const Article = ({ data }) => {
   const article = data.strapiArticle
+  console.log("!!!!!!!!!!!!!!!!!!!!! ---> ", article, " ", article.title, article.excerpt)
   return (
     <Layout>
+      {/* <SEO title={article.title} description={article.excerpt} /> */}
       <div>
         <div
           id="banner"
