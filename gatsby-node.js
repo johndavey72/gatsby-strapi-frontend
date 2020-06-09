@@ -25,6 +25,13 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+      },
+      allStrapiArticle {
+        edges {
+          node {
+            strapiId
+          }
+        }
       }
     }
   `)

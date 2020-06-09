@@ -11,7 +11,7 @@ export default function Layout({ children }) {
           siteMetadata {
             title
           }
-        },
+        }
         allStrapiCategory {
           edges {
             node {
@@ -43,14 +43,17 @@ export default function Layout({ children }) {
           {data.site.siteMetadata.title}
         </h3>
       </Link>
-      <tbody>
-            {data.allStrapiCategory.edges.map(({ node }, index) => (
-              <tr key={index}>
-                <td>{node.strapiId}</td>
-                <td>{node.name}</td>
-              </tr>
-            ))}
-          </tbody>
+
+      <ul>
+        {data.allStrapiCategory.edges.map(({ node }, index) => (
+          <tr key={index}>
+            <li key={node.strapiId}>
+              <Link to={`/category/${node.strapiId}`}>{node.name}</Link>
+            </li>
+          </tr>
+        ))}
+      </ul>
+
       <Link
         to={`/about/`}
         css={css`
