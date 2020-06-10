@@ -1,5 +1,5 @@
 ---
-title: "Futurama Pandas"
+title: "Futurama"
 date: "2017-03-21"
 ---
 

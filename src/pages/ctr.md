@@ -1,11 +1,9 @@
 ---
-title: "Sweet Pandas Eating Sweets"
+title: "Council Tax Reduction"
 date: "2017-08-10"
 ---
 
-Pandas are really sweet.
-
-Here's a video of a panda eating some sweets.
+Some information about council tax reduction
 
 
 # Hey, whatcha watching?
